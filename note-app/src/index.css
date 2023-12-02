@@ -1,0 +1,157 @@
+
+.container{
+    max-width:960px;
+    min-height:250px;
+    margin: 0px auto;
+    padding:0px;
+    padding: 0 15px;
+
+    position: relative;
+}
+.notes-list{
+    display:grid;
+    grid-gap:1rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.note{
+    background: #fef68a ;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height:170px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    white-space: pre-wrap;  /*keep the white space(line) that was added to the chat*/
+  
+}
+.note span{
+    word-wrap: break-word
+}
+.note-footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addNote{
+    background-color: #67d7cc;
+}
+textarea{
+    background-color: #67d7cc;
+    border:none;
+    resize:none;  /* too avoid user to fix the size of textarea */
+}
+textarea:focus{
+    outline:none;
+}
+.save{
+    background: #e1e1e1;
+    border:none;
+    border-radius:15px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.save:hover{
+    background-color: #ededed;
+}
+
+
+.first-notif{
+    width:500px;
+   
+    color: white;
+    background-color: #67d7cc;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 15px;
+    
+}
+.first-text{
+    margin-bottom: 10px;
+}
+.first-button{
+    margin-top:20px;
+    cursor: pointer;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding: 1rem;
+    border-radius: 15px;   
+}
+
+.delete-note-icon{
+    cursor: pointer;
+}
+.delete-note-icon:hover{
+    background-color:#67d7cc;
+    padding:1px;
+    border-radius: 15px;
+
+}
+
+
+.search-container{
+    background-color: rgb(233,233,233);
+    display:flex;
+    align-items: center;
+    padding:10px;
+    border-radius: 15px;
+    margin-bottom: 1.5em;
+}
+
+.search-container input{
+    background-color: rgb(233,233,233);
+    border:none;
+    width:100%;
+}
+.search-container input:focus{
+    outline:none;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.toggler{
+    display:flex;
+    align-items: center;
+}
+.light-text, .dark-text{
+    font-size:0.8rem;
+}
+.toggler-slider{
+    display:flex;
+    justify-content: flex-start;
+    width:25px;
+    height:13px;
+    background-color: #2B283A;
+    border-radius:2rem;
+    margin-inline: 5px;
+    cursor: pointer;
+    align-items: center;
+    border: 1px solid black;
+}
+.toggler-circle{
+    background-color: white;
+    height:13px;
+    width:13px;
+    border-radius:50%;
+}
+.dark .toggler-slider{
+    justify-content: flex-end;
+}
+.dark{
+    background-color: black;
+    padding-bottom:10px;
+    border-radius: 15px;
+}
+.dark h1,.dark .toggler{
+    color:white;
+}
